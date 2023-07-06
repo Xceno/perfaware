@@ -1,0 +1,17 @@
+{:paths ["src"]
+ :deps  {org.clojure/clojure                       {:mvn/version "1.11.1"}
+         com.taoensso/nippy                        {:mvn/version "3.2.0"}
+         cnuernber/dtype-next                      {:mvn/version "10.000-beta-50"}
+         techascent/tech.ml.dataset                {:mvn/version "7.000-beta-51"}
+
+         ;; Profiler
+         com.taoensso/tufte                        {:mvn/version "2.4.5"}
+         com.clojure-goes-fast/clj-async-profiler  {:mvn/version "1.0.4"}
+         criterium/criterium                       {:mvn/version "0.4.6"}
+
+         ;; JSON
+         pjson/pjson                               {:mvn/version "1.0.0"}
+         metosin/jsonista                          {:mvn/version "0.3.7"}
+
+         ;; DevTools
+         com.clojure-goes-fast/clj-java-decompiler {:mvn/version "0.3.4"}}}
