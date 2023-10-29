@@ -48,3 +48,10 @@
 # haversine-data
 **/haversine-data.json
 **/haversine-data.nippy
+
+# zig
+zig-cache/
+zig-out/
+zig/release/
+zig/debug/
+zig/build/
