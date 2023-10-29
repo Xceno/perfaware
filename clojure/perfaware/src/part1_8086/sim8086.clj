@@ -1,7 +1,8 @@
 ﻿(ns part1-8086.sim8086
   (:require
     [clojure.java.io :as io]
-    [clojure.string :as str]))
+    [clojure.string :as str])
+  (:import (java.io ByteArrayOutputStream)))
 
 (set! *warn-on-reflection* true)
 
@@ -163,24 +164,9 @@
 (defn re-assemble [{:keys [opcode destination source]}]
   (str (name opcode) " " (name destination) ", " (name source)))
 
-;(defn read-file [filename]
-;  #_(with-open [input (io/input-stream filename)
-;                output (ByteArrayOutputStream.)]
-;      (io/copy input output)
-;      (.toByteArray output))
-;  (with-open [input (io/input-stream filename)]
-;    (loop [x []]
-;      (let [b (.read input)]
-;        (if (= b -1)
-;          (do (print-bits b)
-;              x)
-;          (do
-;            (print-bits b)
-;            (recur (conj x (bit-or (bit-shift-left b 8) (.read input))))))))))
-
 (defn file->bytes [file]
   (with-open [xin (io/input-stream file)
-              xout (java.io.ByteArrayOutputStream.)]
+              xout (ByteArrayOutputStream.)]
     (io/copy xin xout)
     (.toByteArray xout)))
 
