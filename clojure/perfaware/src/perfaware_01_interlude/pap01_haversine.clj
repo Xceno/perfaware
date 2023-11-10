@@ -65,7 +65,7 @@
 (def ^:const earth-radius-km 6371)
 
 (defn calc-throughput [cnt start-time end-time]
-  (str (double (* (/ cnt (nanos->seconds (- end-time start-time))))) " haversines/second"))
+  (str (double (/ cnt (nanos->seconds (- end-time start-time)))) " haversines/second"))
 
 (defn perfaware-01-interlude-haversine--single []
   (def start-time (crit/timestamp))
