@@ -18,6 +18,7 @@
 # clj tools
 **/.calva/output-window/
 **/.classpath
+.clj-kondo/
 **/.clj-kondo/.cache
 **/.cpcache
 **/.eastwood
@@ -55,4 +56,6 @@ zig-out/
 zig/release/
 zig/debug/
 zig/build/
-.clj-kondo/
+
+# Other
+*.exe
